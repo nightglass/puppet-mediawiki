@@ -58,8 +58,8 @@ class mediawiki (
   Class['mysql::server'] -> Class['mediawiki']
   Class['mysql::config'] -> Class['mediawiki']
   
-  class { 'apache': }
-  class { 'apache::mod::php': }
+  include apache
+  include apache::mod::php
   
   
   # Manages the mysql server package and service by default
