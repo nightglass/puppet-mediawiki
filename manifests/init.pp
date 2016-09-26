@@ -96,8 +96,8 @@ class mediawiki (
     subscribe => Exec['get-mediawiki'],
   }
   
-  class { 'memcached':
-    max_memory => $max_memory,
-    max_connections => '1024',
-  }
+#  class { 'memcached':
+#    max_memory => $max_memory,
+#    max_connections => '1024',
+#  }
 } 
